@@ -5,6 +5,22 @@ This app still under construction. Please see [issue](https://github.com/naokits
 
 [octokit.objc]: https://github.com/octokit/octokit.objc
 
+This app show you followings:
+
+* [Making Requests](https://github.com/octokit/octokit.objc#making-requests)
+    * Receiving results one-by-one
+    * Receiving all results at once
+    * Receiving results on the main thread
+    * Cancelling a request
+* [Authentication](https://github.com/octokit/octokit.objc#authentication)
+    * Signing in through a browser
+    * Signing in through the app
+    * Choosing an authentication method dynamically
+    * Saving credentials
+* And more? ..
+
+
+
 ## Installation
 
 See also OctoKit's [Importing OctoKit](https://github.com/octokit/octokit.objc#importing-octokit)
@@ -111,7 +127,7 @@ Checking connectivity... done
 ```
 Then back to OctoKitDemo root directory.
 
-You should add **AccountSettings.h** to project root directory.
+You should also put **AccountSettings.h** to project root directory.
 
 ```
 // AccountSettings.h
