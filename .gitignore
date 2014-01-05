@@ -21,3 +21,8 @@ DerivedData
 
 # CocoaPods
 Pods
+
+# for privacy
+
+AccountSettings.h
+
