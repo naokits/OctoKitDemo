@@ -8,6 +8,7 @@
 
 #import "RXAppDelegate.h"
 
+
 @implementation RXAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -15,6 +16,57 @@
     // Override point for customization after application launch.
     return YES;
 }
+
+//=============================================================================
+#pragma mark - OctoKit
+//=============================================================================
+
+- (void)simpleRequest
+{
+    NSString *username = @"naokits";
+    OCTUser *user = [OCTUser userWithLogin:username server:OCTServer.dotComServer];
+    OCTClient *client = [OCTClient unauthenticatedClientWithUser:user];
+    
+    // Prepares a request that will load all of the user's repositories, represented
+    // by `OCTRepository` objects.
+    //
+    // Note that the request is not actually _sent_ until you use one of the
+    // -subscribe… methods below.
+    RACSignal *request = [client fetchUserRepositories];
+    
+    // This method actually kicks off the request, handling any results using the
+    // blocks below.
+    [request subscribeNext:^(OCTRepository *repository) {
+        // This block is invoked for _each_ result received, so you can deal with
+        // them one-by-one as they arrive.
+        NSLog(@"リポジトリ:%@", repository);
+    } error:^(NSError *error) {
+        // Invoked when an error occurs.
+        //
+        // Your `next` and `completed` blocks won't be invoked after this point.
+        NSLog(@"エラー:%@", error);
+    } completed:^{
+        // Invoked when the request completes and we've received/processed all the
+        // results.
+        //
+        // Your `next` and `error` blocks won't be invoked after this point.
+        NSLog(@"完了");
+    }];
+}
+
+- (void)oAuthAccess
+{
+    [OCTClient setClientID:@"85f97b090c7641e96c90"
+              clientSecret:@"ef4763c780c6248eb1d81abaa289ab252e89cc0a"];
+
+    
+//    [OCTUser userWithName:@"naokits" email:@"naokitsutsui@me.com"];
+//    [OCTClient authenticatedClientWithUser:@"hoge" token:@"hoge"];
+    
+    
+    //    [OCTClient authenticatedClientWithUser:<#(OCTUser *)#> password:<#(NSString *)#>
+}
+
 							
 - (void)applicationWillResignActive:(UIApplication *)application
 {
