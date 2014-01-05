@@ -1,6 +1,8 @@
 
 This is non official simple demonstration app for [octokit.objc].
 
+This app still under construction. Please see [issue](https://github.com/naokits/OctoKitDemo/issues)
+
 [octokit.objc]: https://github.com/octokit/octokit.objc
 
 ## Installation
