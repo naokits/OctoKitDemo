@@ -204,6 +204,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		124D285F187919EC0093E0A8 /* AccountSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountSettings.h; sourceTree = SOURCE_ROOT; };
 		1271094218780B1F0021E87E /* OctoKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OctoKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1271094518780B1F0021E87E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1271094718780B1F0021E87E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -308,6 +309,7 @@
 		1271094B18780B1F0021E87E /* OctoKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				124D285F187919EC0093E0A8 /* AccountSettings.h */,
 				1271095418780B1F0021E87E /* RXAppDelegate.h */,
 				1271095518780B1F0021E87E /* RXAppDelegate.m */,
 				1271095718780B1F0021E87E /* Main.storyboard */,

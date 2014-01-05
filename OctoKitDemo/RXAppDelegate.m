@@ -7,6 +7,7 @@
 //
 
 #import "RXAppDelegate.h"
+#import "AccountSettings.h"
 
 
 @implementation RXAppDelegate
@@ -14,6 +15,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [self simpleRequest];
     return YES;
 }
 
@@ -23,7 +25,7 @@
 
 - (void)simpleRequest
 {
-    NSString *username = @"naokits";
+    NSString *username = @"github";
     OCTUser *user = [OCTUser userWithLogin:username server:OCTServer.dotComServer];
     OCTClient *client = [OCTClient unauthenticatedClientWithUser:user];
     
@@ -39,32 +41,19 @@
     [request subscribeNext:^(OCTRepository *repository) {
         // This block is invoked for _each_ result received, so you can deal with
         // them one-by-one as they arrive.
-        NSLog(@"リポジトリ:%@", repository);
+        NSLog(@"Repository Info:%@", repository);
     } error:^(NSError *error) {
         // Invoked when an error occurs.
         //
         // Your `next` and `completed` blocks won't be invoked after this point.
-        NSLog(@"エラー:%@", error);
+        NSLog(@"Error:%@", error);
     } completed:^{
         // Invoked when the request completes and we've received/processed all the
         // results.
         //
         // Your `next` and `error` blocks won't be invoked after this point.
-        NSLog(@"完了");
+        NSLog(@"Done!");
     }];
-}
-
-- (void)oAuthAccess
-{
-    [OCTClient setClientID:@"85f97b090c7641e96c90"
-              clientSecret:@"ef4763c780c6248eb1d81abaa289ab252e89cc0a"];
-
-    
-//    [OCTUser userWithName:@"naokits" email:@"naokitsutsui@me.com"];
-//    [OCTClient authenticatedClientWithUser:@"hoge" token:@"hoge"];
-    
-    
-    //    [OCTClient authenticatedClientWithUser:<#(OCTUser *)#> password:<#(NSString *)#>
 }
 
 							
