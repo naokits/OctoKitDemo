@@ -23,8 +23,12 @@ DerivedData
 Pods
 
 # for privacy
-
 AccountSettings.h
+
+# Misc
+OctoKit/
+
+
 <<<<<<< HEAD
 
 =======
