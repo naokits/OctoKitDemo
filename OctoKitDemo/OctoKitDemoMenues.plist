@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Authentication</key>
+	<dict>
+		<key>menuID</key>
+		<integer>2</integer>
+		<key>subtitles</key>
+		<array>
+			<string>Signing in through a browser</string>
+			<string>Signing in through the app</string>
+			<string>Choosing an authentication method dynamically</string>
+			<string>Saving credentials</string>
+		</array>
+		<key>title</key>
+		<string>Authentication</string>
+	</dict>
+	<key>MakingRequests</key>
+	<dict>
+		<key>menuID</key>
+		<integer>1</integer>
+		<key>subtitles</key>
+		<array>
+			<string>Receiving results one-by-one</string>
+			<string>Receiving all results at once</string>
+			<string>Receiving results on the main thread</string>
+			<string>Cancelling a request</string>
+		</array>
+		<key>title</key>
+		<string>Making Requests</string>
+	</dict>
+</dict>
+</plist>

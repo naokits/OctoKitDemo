@@ -22,6 +22,7 @@
 		1271096A18780B1F0021E87E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1271094918780B1F0021E87E /* UIKit.framework */; };
 		1271097218780B1F0021E87E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1271097018780B1F0021E87E /* InfoPlist.strings */; };
 		1271097418780B1F0021E87E /* OctoKitDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1271097318780B1F0021E87E /* OctoKitDemoTests.m */; };
+		127F1A601879568E0091A601 /* OctoKitDemoMenues.plist in Resources */ = {isa = PBXBuildFile; fileRef = 127F1A5F1879568E0091A601 /* OctoKitDemoMenues.plist */; };
 		12A78F8918790B7E006B90E5 /* libOctoKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12A78D1C18790A8F006B90E5 /* libOctoKit.a */; };
 		12A78F8A18790B93006B90E5 /* libMantle-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12A78F6018790AD0006B90E5 /* libMantle-iOS.a */; };
 		12A78F8B18790B9D006B90E5 /* libReactiveCocoa-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12A78F7218790ADD006B90E5 /* libReactiveCocoa-iOS.a */; };
@@ -226,6 +227,7 @@
 		1271096F18780B1F0021E87E /* OctoKitDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OctoKitDemoTests-Info.plist"; sourceTree = "<group>"; };
 		1271097118780B1F0021E87E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1271097318780B1F0021E87E /* OctoKitDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OctoKitDemoTests.m; sourceTree = "<group>"; };
+		127F1A5F1879568E0091A601 /* OctoKitDemoMenues.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = OctoKitDemoMenues.plist; sourceTree = "<group>"; };
 		12A78D0618790A8E006B90E5 /* OctoKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OctoKit.xcodeproj; path = OctoKit/OctoKit.xcodeproj; sourceTree = "<group>"; };
 		12A78D1F18790AA3006B90E5 /* OctoKitDependencies.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OctoKitDependencies.xcodeproj; path = OctoKit/External/OctoKitDependencies/OctoKitDependencies.xcodeproj; sourceTree = "<group>"; };
 		12A78F5318790AD0006B90E5 /* Mantle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Mantle.xcodeproj; path = OctoKit/External/Mantle/Mantle.xcodeproj; sourceTree = "<group>"; };
@@ -327,6 +329,7 @@
 			isa = PBXGroup;
 			children = (
 				1271094D18780B1F0021E87E /* OctoKitDemo-Info.plist */,
+				127F1A5F1879568E0091A601 /* OctoKitDemoMenues.plist */,
 				1271094E18780B1F0021E87E /* InfoPlist.strings */,
 				1271095118780B1F0021E87E /* main.m */,
 				1271095318780B1F0021E87E /* OctoKitDemo-Prefix.pch */,
@@ -673,6 +676,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				127F1A601879568E0091A601 /* OctoKitDemoMenues.plist in Resources */,
 				1271096118780B1F0021E87E /* Images.xcassets in Resources */,
 				1271095018780B1F0021E87E /* InfoPlist.strings in Resources */,
 				1271095918780B1F0021E87E /* Main.storyboard in Resources */,

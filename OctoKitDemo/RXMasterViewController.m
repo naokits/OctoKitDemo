@@ -25,11 +25,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    
+    [self loadMenu];
+}
 
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
+- (void)loadMenu
+{
+    if (!_objects) {
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"OctoKitDemoMenues" ofType:@"plist"];
+        NSDictionary *dic = [[NSDictionary alloc] initWithContentsOfFile:path];
+        NSArray *array =[dic allValues];
+        NSSortDescriptor *descriptor = [[NSSortDescriptor alloc] initWithKey:@"menuID" ascending:YES];
+        NSArray *descriptors = [NSArray arrayWithObjects:descriptor, nil];
+        // menuIDキーでソートした配列を取得
+        _objects = [[array sortedArrayUsingDescriptors:descriptors] mutableCopy];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -64,8 +75,9 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    NSDate *object = _objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    id object = _objects[indexPath.row];
+    cell.textLabel.text = [object valueForKeyPath:@"title"];
+    
     return cell;
 }
 
