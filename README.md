@@ -137,6 +137,10 @@ static NSString * const GitHubClientSecret = @"YOUR_CLIENT_SECRET";
 
 and just open OctoKitDemo.xcodeproj.
 
+# Links
+
+* [octokit/octokit.objc](https://github.com/octokit/octokit.objc)
+* [MantleFramework/Mantle](https://github.com/MantleFramework/Mantle)
 
 
 # License
